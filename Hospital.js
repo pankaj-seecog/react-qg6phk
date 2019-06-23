@@ -6,7 +6,12 @@ constructor(){
   this.state = {
     hospital_name : "Appolo",
     rank : 3,
-    doctors : ["Mr Mohan","Mr Sohan","Mr Rohan"]
+    doctors : [
+      {name : 'Mohan',age : 21,dept : 'Neuro'},
+      {name : 'Sohan',age : 22,dept : 'Cardio'},
+      {name : 'Rohan',age : 23,dept : 'Ortho'}
+    ]
+    // doctors : ["Mr Mohan","Mr Sohan","Mr Rohan"]
   }
 }
 
@@ -16,15 +21,24 @@ render(){
 Hospital Name : {this.state.hospital_name}<br/>
 Rank : {this.state.rank}
 <hr/>
-<ul>
+
+<table>
+<th>Name</th><th>Age</th><th>Department</th>
 {
-  this.state.doctors.map((doc)=>{
-    return (
-      <h6>{doc}</h6>
-    )
-  })
+this.state.doctors.map((doc)=>{
+  return (
+   <tr>
+<td>{doc.name}</td>
+<td>{doc.age}</td>
+<td>{doc.dept}</td>
+   </tr> 
+  )
+})
+
 }
-</ul>
+</table>
+
+
     </div>
   )
 }
