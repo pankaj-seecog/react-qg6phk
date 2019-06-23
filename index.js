@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
-import Hospital from './Hospital';
+import Actors from './Actors';
 class App extends Component {
   constructor() {
     super();
@@ -23,4 +23,4 @@ class App extends Component {
   }
 }
 
-render(<Hospital />, document.getElementById('root'));
+render(<Actors />, document.getElementById('root'));
