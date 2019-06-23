@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 
 class Actors extends Component{
-
 constructor(){
 this.state = {
   actors : [
